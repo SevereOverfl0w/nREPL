@@ -9,7 +9,7 @@ popular options available for you today.
 
 #### Using Leiningen
 
-[Leiningen][] has built-in support for nREPL since
+link:https://github.com/technomancy/leiningen[Leiningen] has built-in support for nREPL since
 version 2. Just do:
 
 [source]
@@ -18,7 +18,7 @@ lein repl
 ----
 
 And you're all set. By default Lein will also connect to the running nREPL server using the
-popular command-line nREPL client [REPL-y][]. If you don't need the terminal REPL you can
+popular command-line nREPL client link:https://github.com/trptcolin/reply/[REPL-y]. If you don't need the terminal REPL you can
 also start nREPL in headless mode:
 
 [source]
@@ -28,7 +28,7 @@ lein repl :headless
 
 #### Using Boot
 
-[Boot][] is a popular alternative to Leiningen, that also has build-in support for nREPL:
+link:https://github.com/boot-clj/boot[Boot] is a popular alternative to Leiningen, that also has build-in support for nREPL:
 
 [source]
 ----
@@ -111,7 +111,7 @@ client/tool.  Tools that support nREPL include:
   support for vim)
 * link:https://github.com/jasongilman/proto-repl[Proto REPL] (Proto REPL is a Clojure development environment and REPL for Atom)
 * link:https://github.com/BetterThanTomorrow/calva[Calva] (Clojure & ClojureScript support for VS Code)
-* [REPL-y][] (command-line client for nREPL)
+* link:https://github.com/trptcolin/reply/[REPL-y] (command-line client for nREPL)
 
 Both Leiningen and Boot use internally REPL-y, as their command-line nREPL client.
 
@@ -301,7 +301,3 @@ user=> (add-dependencies :coordinates '[[org.clojure/core.memoize "0.7.1"]]
 user=> (require 'clojure.core.memoize)
 nil
 ----
-
-[REPL-y]: https://github.com/trptcolin/reply/
-[Boot]: https://github.com/boot-clj/boot
-[Leiningen]: https://github.com/technomancy/leiningen

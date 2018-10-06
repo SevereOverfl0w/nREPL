@@ -60,7 +60,7 @@ for your preferences (although currently link:https://opencollective.com/cider[O
 If you're working in a company that's making significant use of nREPL we'd appreciate it if you suggest to your company
 to become a nREPL sponsor.
 
-You can support the development of nREPL, CIDER, [clojure-mode][] and [inf-clojure][] via
+You can support the development of nREPL, CIDER, link:https://github.com/clojure-emacs/clojure-mode[clojure-mode] and link:https://github.com/clojure-emacs/inf-clojure[inf-clojure] via
 link:https://opencollective.com/cider[Open Collective],
 link:https://salt.bountysource.com/teams/cider[Salt],
 link:https://www.patreon.com/bbatsov[Patreon],
@@ -72,6 +72,3 @@ link:https://liberapay.com/bbatsov/donate[Liberapay] and PayPal.
 
 * [link:https://opencollective.com/cider#backer[Become a backer]] (for individuals)
 * [link:https://opencollective.com/cider#sponsor[Become a sponsor]] (for companies)
-
-[clojure-mode]: https://github.com/clojure-emacs/clojure-mode
-[inf-clojure]: https://github.com/clojure-emacs/inf-clojure
