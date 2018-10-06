@@ -2,7 +2,7 @@
 
 nREPL largely consists of three abstractions: handlers, middleware, and
 transports.  These are roughly analogous to the handlers, middleware, and
-adapters of [Ring](https://github.com/ring-clojure/ring), though there are some
+adapters of link:https://github.com/ring-clojure/ring[Ring], though there are some
 important semantic differences. Finally, nREPL is fundamentally message-oriented
 and asynchronous (in contrast to most REPLs that build on top of streams
 provided by e.g.  terminals).
@@ -93,9 +93,9 @@ responses that makes issuing interrupts very straightforward.)
 
 *Note that interrupts are performed on a “best-effort” basis, and are subject
 to the limitations of Java’s threading model.  For more read
-[here](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Thread.html#interrupt%28%29)
+link:http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Thread.html#interrupt%28%29[here]
 and
-[here](http://download.oracle.com/javase/1.5.0/docs/guide/misc/threadPrimitiveDeprecation.html).*
+link:http://download.oracle.com/javase/1.5.0/docs/guide/misc/threadPrimitiveDeprecation.html[here].*
 -->
 
 #### Transports
@@ -112,11 +112,11 @@ nREPL includes two transports, both of which are socket-based: a "tty"
 transport that allows one to connect to an nREPL endpoint using e.g. `telnet`
 (which therefore supports only the most simplistic interactive evaluation of
 expressions), and one that uses
-[bencode](https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding) to encode
+link:https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding[bencode] to encode
 nREPL messages over sockets.  It is the latter that is used by default by
 `nrepl.server/start-server` and `nrepl.core/connect`.
 
-[Other nREPL transports are provided by the community](https://github.com/nrepl/nrepl/wiki/Extensions).
+link:https://github.com/nrepl/nrepl/wiki/Extensions[Other nREPL transports are provided by the community].
 
 #### Handlers
 
@@ -272,7 +272,7 @@ which provides "a machine- and human-readable directory and documentation for
 the operations supported by an nREPL endpoint" (see
 `nrepl.middleware/describe-markdown`, and the results of
 `"describe"` and `describe-markdown`
-[here](https://github.com/nrepl/nrepl/blob/master/doc/ops.md)).
+link:https://github.com/nrepl/nrepl/blob/master/doc/ops.md[here]).
 
 The `:requires` and `:expects` entries control the order in which
 middleware is applied to a base handler.  In the `add-stdin` example above,
@@ -306,7 +306,7 @@ should do the same, or use a similar alternative base handler.
 
 #### Sessions
 
-Sessions persist [dynamic vars](https://clojure.org/reference/vars)
+Sessions persist link:https://clojure.org/reference/vars[dynamic vars]
 (collected by `get-thread-bindings`) against a unique lookup. This is
 allows you to have a different value for `*e` from different REPL
 clients (e.g. two separate REPL-y instances). An existing session can
@@ -315,10 +315,10 @@ for copying of existing preferences into new environments.
 
 Sessions become even more useful when different nREPL extensions start
 taking advantage of
-them. [debug-repl](https://github.com/gfredericks/debug-repl/) uses
+them. link:https://github.com/gfredericks/debug-repl/[debug-repl] uses
 sessions to store information about the current breakpoint, allowing
 debugging of two things
-separately. [piggieback](https://github.com/nrepl/piggieback) uses
+separately. link:https://github.com/nrepl/piggieback[piggieback] uses
 sessions to allow host a ClojureScript REPL alongside an existing
 Clojure one.
 

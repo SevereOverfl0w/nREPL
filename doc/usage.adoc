@@ -101,16 +101,16 @@ interface (this output was simply generated with `--help`):
 Most of the time, you will connect to an nREPL server using an existing
 client/tool.  Tools that support nREPL include:
 
-* [CIDER](https://github.com/clojure-emacs/cider) (Clojure Interactive
+* link:https://github.com/clojure-emacs/cider[CIDER] (Clojure Interactive
   Development Environment that Rocks for Emacs)
-* [Cursive](https://cursiveclojure.com) (Clojure IDE/plugin for IntelliJ Idea)
-* [Counterclockwise](https://github.com/ccw-ide/ccw) (Clojure IDE/plugin
+* link:https://cursiveclojure.com[Cursive] (Clojure IDE/plugin for IntelliJ Idea)
+* link:https://github.com/ccw-ide/ccw[Counterclockwise] (Clojure IDE/plugin
   for Eclipse)
-* [monroe](https://github.com/sanel/monroe) (nREPL client for Emacs)
-* [fireplace.vim](https://github.com/tpope/vim-fireplace) (Clojure + nREPL
+* link:https://github.com/sanel/monroe[monroe] (nREPL client for Emacs)
+* link:https://github.com/tpope/vim-fireplace[fireplace.vim] (Clojure + nREPL
   support for vim)
-* [Proto REPL](https://github.com/jasongilman/proto-repl) (Proto REPL is a Clojure development environment and REPL for Atom)
-* [Calva](https://github.com/BetterThanTomorrow/calva) (Clojure & ClojureScript support for VS Code)
+* link:https://github.com/jasongilman/proto-repl[Proto REPL] (Proto REPL is a Clojure development environment and REPL for Atom)
+* link:https://github.com/BetterThanTomorrow/calva[Calva] (Clojure & ClojureScript support for VS Code)
 * [REPL-y][] (command-line client for nREPL)
 
 Both Leiningen and Boot use internally REPL-y, as their command-line nREPL client.
