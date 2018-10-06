@@ -209,11 +209,9 @@ user-specified middleware provided to
 `nrepl.server/default-handler`.  To understand how that implicit
 merge works, we'll first need to talk about middleware "descriptors".
 
-[Other nREPL middlewares are provided by the community]
-(https://github.com/nrepl/nrepl/wiki/Extensions).
+link:https://github.com/nrepl/nrepl/wiki/Extensions[Other nREPL middlewares are provided by the community].
 
-(See [this documentation
-listing](https://github.com/nrepl/nrepl/blob/master/doc/ops.md) for
+(See link:https://github.com/nrepl/nrepl/blob/master/doc/ops.md[this documentation listing] for
 details as to the operations implemented by nREPL's default middleware stack,
 what each operation expects in request messages, and what they emit for
 responses.)
