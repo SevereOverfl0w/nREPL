@@ -39,14 +39,15 @@ If you're into the `clj` command you can take advantage of nREPL's built-in comm
 
 Add this alias to `~/.clojure/deps.edn`:
 
-``` clojure
+[source,clojure]
+----
 {
 ;; ...
 :aliases {:nREPL
           {:extra-deps
             {nrepl/nrepl {:mvn/version "0.4.5"}}}}
 }
-```
+----
 
 Then you can simply run the nREPL server in headless mode like this:
 
@@ -58,7 +59,8 @@ A good practice is add whatever nREPL middleware you want to use to
 the `nREPL` profile, so you can easily activate them when needed. Here's
 how you can easily start a ClojureScript capable nREPL:
 
-``` clojure
+[source,clojure]
+----
 {
 ;; ...
 :aliases {:nREPL
@@ -66,7 +68,7 @@ how you can easily start a ClojureScript capable nREPL:
            {nrepl/nrepl {:mvn/version "0.4.5"}
             cider/piggieback {:mvn/version "0.3.8"}}}}
 }
-```
+----
 
 ```
 clj -R:nREPL -m nrepl.cmdline --middleware "[cider.piggieback/wrap-cljs-repl]"
@@ -75,7 +77,8 @@ clj -R:nREPL -m nrepl.cmdline --middleware "[cider.piggieback/wrap-cljs-repl]"
 Here's a listing of all the options available via nREPL's command-line
 interface (this output was simply generated with `--help`):
 
-``` clojure
+[source,clojure]
+----
 -i/--interactive            Start nREPL and connect to it with the built-in client.
 -c/--connect                Connect to a running nREPL with the built-in client.
 -C/--color                  Use colors to differentiate values from output in the REPL. Must be combined with --interactive.
@@ -86,7 +89,7 @@ interface (this output was simply generated with `--help`):
 -n/--handler HANDLER        The nREPL message handler to use for each incoming connection; defaults to the result of `(nrepl.server/default-handler)`.
 -m/--middleware MIDDLEWARE  A sequence of vars, representing middleware you wish to mix in to the nREPL handler.
 --help                      Show this help message.
-```
+----
 
 ### Connecting to an nREPL server
 
