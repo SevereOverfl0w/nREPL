@@ -30,11 +30,11 @@ Sure! See [third party middleware](third_party_middleware.md) for details.
 
 ## Where can I get help regarding nREPL?
 
-See the [Support](about/support.md) section of the manual.
+See the <<about/support.adoc#,Support>> section of the manual.
 
 ## What should I do if I run into some issues with nREPL?
 
-Don't panic! Next step - visit the [Troubleshooting](troubleshooting.md) section of
+Don't panic! Next step - visit the <<troubleshooting.adoc#,Troubleshooting>> section of
 the manual.
 
 ## How can I help the project?

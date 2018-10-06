@@ -221,7 +221,7 @@ server whereever it might be deployed; this can greatly simplify debugging,
 sanity-checking, panicked code patching, and so on.
 
 nREPL provides a socket-based server that you can trivially start from your
-application.  [Add it to your project's dependencies](installation.md), and add code
+application.  <<installation.adoc#,Add it to your project's dependencies>>, and add code
 like this to your app:
 
 [source,clojure]

@@ -2,7 +2,7 @@
 
 Report issues and suggest features and improvements on the
 [GitHub issue tracker](https://github.com/nrepl/nREPL/issues). Don't ask
-questions on the issue tracker - use the [support channels](support.md) instead.
+questions on the issue tracker - use the <<support.adoc#,support channels>> instead.
 
 If you want to file a bug, please provide all the necessary info listed in
 our issue reporting template (it's loaded automatically when you create a
