@@ -145,32 +145,35 @@ editor instead for optimal results.
 If you want to connect to an nREPL server using the default transport, something
 like this will work:
 
-```clojure
+[source,clojure]
+----
 => (require '[nrepl.core :as repl])
 nil
 => (with-open [conn (repl/connect :port 59258)]
      (-> (repl/client conn 1000)    ; message receive timeout required
        (repl/message {:op "eval" :code "(+ 2 3)"})
        repl/response-values))
-```
+----
 
 If your nREPL server is running on a different machine or listening on a specific
 address different than the default one, you can use the `:host` keyword in the
 `connect` function to specify which address to connect to. E.g., to
 connect to a nREPL server listening on address 172.18.0.5 and port 4001:
 
-```clojure
+[source,clojure]
+----
 => (with-open [conn (repl/connect :host "172.18.0.5" :port 4001)]
      (-> (repl/client conn 1000)    ; message receive timeout required
        (repl/message {:op "eval" :code "(+ 2 3)"})
        repl/response-values))
-```
+----
 
 `response-values` will return only the values of evaluated expressions, read
 from their (by default) `pr`-encoded representations via `read`.  You can see
 the full content of message responses easily:
 
-```clojure
+[source,clojure]
+----
 => (with-open [conn (repl/connect :port 59258)]
      (-> (repl/client conn 1000)
        (repl/message {:op :eval :code "(time (reduce + (range 1e6)))"})
@@ -187,7 +190,7 @@ nil
  {:status ["done"],
   :session "2ba81681-5093-4262-81c5-edddad573201",
   :id "3124d886-7a5d-4c1e-9fc3-2946b1b3cfaa"})
-```
+----
 
 Each message must contain at least an `:op` (or `"op"`) slot, which specifies
 the "type" of the operation to be performed.  The operations supported by an
@@ -211,24 +214,26 @@ nREPL provides a socket-based server that you can trivially start from your
 application.  [Add it to your project's dependencies](installation.md), and add code
 like this to your app:
 
-```clojure
+[source,clojure]
+----
 => (use '[nrepl.server :only (start-server stop-server)])
 nil
 => (defonce server (start-server :port 7888))
 #'user/server
-```
+----
 
 If you want your nREPL server to listen on a particular address instead of the
 default one, you can use the `:bind` keyword to specify the address to
 listen on. E.g., to make the nREPL server listen on address 172.18.0.5
 and port 4001:
 
-```clojure
+[source,clojure]
+----
 => (use '[nrepl.server :only (start-server stop-server)])
 nil
 => (defonce server (start-server :bind "172.18.0.5" :port 4001))
 #'user/server
-```
+----
 
 Depending on what the lifecycle of your application is, whether you want to be
 able to easily restart the server, etc., you might want to put the value

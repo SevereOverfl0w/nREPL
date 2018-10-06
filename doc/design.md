@@ -22,9 +22,10 @@ further require the incoming message to contain other data.  Which data an
 operation requires or may accept varies; for example, a message to evaluate
 some code might look like this:
 
-```clojure
+[source,clojure]
+----
 {"op" "eval" "code" "(+ 1 2 3)"}
-```
+----
 
 The result(s) of performing each operation may be sent back to the nREPL client
 in one or more response messages, the contents of which again depend upon the
@@ -176,7 +177,8 @@ handler that may compose additional functionality onto or around the original.
 For example, some middleware that handles a hypothetical `"time?"` `:op` by
 replying with the local time on the server:
 
-```clojure
+[source,clojure]
+----
 (require '[nrepl.transport :as t])
 (use '[nrepl.misc :only (response-for)])
 
@@ -186,7 +188,7 @@ replying with the local time on the server:
     (if (= "time?" op)
       (t/send transport (response-for msg :status :done :time (System/currentTimeMillis)))
       (h msg))))
-```
+----
 
 A little silly, but this pattern should be familiar to you if you have
 implemented Ring middleware before.  Nearly all of the same patterns and
@@ -231,7 +233,8 @@ a descriptor applied to them to specify certain constraints in how that
 middleware is applied.  For example, the descriptor for the
 `nrepl.middleware.session/add-stdin` middleware is set thusly:
 
-```clojure
+[source,clojure]
+----
 (set-descriptor! #'add-stdin
   {:requires #{#'session}
    :expects #{"eval"}
@@ -240,7 +243,7 @@ middleware is applied.  For example, the descriptor for the
               :requires {"stdin" "Content to add to *in*."}
               :optional {}
               :returns {"status" "A status of \"need-input\" will be sent if a session's *in* requires content in order to satisfy an attempted read operation."}}}})
-```
+----
 
 Middleware descriptors are implemented as a map in var metadata under a
 `:nrepl.middleware/descriptor` key.  Each descriptor can contain

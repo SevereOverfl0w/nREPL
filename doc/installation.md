@@ -23,9 +23,10 @@ nREPL as a dependency to your project.
 nREPL is available in Clojars. Add this to your Leiningen
 `project.clj` `:dependencies`:
 
-```clojure
+[source,clojure]
+----
 [nrepl "0.4.5"]
-```
+----
 
 [TIP]
 ====
@@ -34,13 +35,14 @@ nREPL is available in Clojars. Add this to your Leiningen
 ====
 Or, add this to your Maven project's `pom.xml`:
 
-```xml
+[source,xml]
+----
 <dependency>
   <groupId>nrepl</groupId>
   <artifactId>nrepl</artifactId>
   <version>0.4.5</version>
 </dependency>
-```
+----
 
 [WARNING]
 ====
