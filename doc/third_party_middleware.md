@@ -2,11 +2,11 @@
 
 Here's a list of notable nREPL middleware you might encounter in the wild.
 
-!!! Warning
-
+[WARNING]
+====
     Make sure you're using the latest versions of those middlewares, as
     all of them added support for nREPL 0.4+ fairly recently.
-
+====
 ### Clojure Editor Support
 
 * [cider-nrepl](https://github.com/clojure-emacs/cider-nrepl): A collection of nREPL middleware designed to enhance CIDER (and Clojure editors in general).
