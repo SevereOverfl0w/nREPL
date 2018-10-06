@@ -6,9 +6,9 @@ currently no nREPL binary or script that you can run to spin a server.
 
 [NOTE]
 ====
-    While there's no binary, there is a command-line interface that
-    mostly targets `clj`. It's documented in the subsequent sections of this
-    manual.
+While there's no binary, there is a command-line interface that
+mostly targets `clj`. It's documented in the subsequent sections of this
+manual.
 ====
 All popular Clojure build tools (Leiningen, Boot, Gradle, Maven) have
 the ability to run an nREPL server and most of the time you'll probably
@@ -30,8 +30,8 @@ nREPL is available in Clojars. Add this to your Leiningen
 
 [TIP]
 ====
-    You can override the version of nREPL supplied by Leiningen and Boot by
-    adding nREPL as a dependency to your project.
+You can override the version of nREPL supplied by Leiningen and Boot by
+adding nREPL as a dependency to your project.
 ====
 Or, add this to your Maven project's `pom.xml`:
 
@@ -46,14 +46,14 @@ Or, add this to your Maven project's `pom.xml`:
 
 [WARNING]
 ====
-    Prior to version 0.3, nREPL used to be hosted on Maven Central and had
-    a different deployment artefact - `org.clojure/clojure.tools.nrepl`.
+Prior to version 0.3, nREPL used to be hosted on Maven Central and had
+a different deployment artefact - `org.clojure/clojure.tools.nrepl`.
 ====
 Please note the changelog in `CHANGELOG.md`.
 
 [NOTE]
 ====
-    nREPL is compatible with Clojure 1.7.0+ and Java 8+.
+nREPL is compatible with Clojure 1.7.0+ and Java 8+.
 ====
 ## Upgrading from nREPL 0.2.x to 0.4.x
 
