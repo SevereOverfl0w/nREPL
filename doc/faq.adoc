@@ -25,7 +25,7 @@ important tickets from our backlog.
 
 ## Are there any interesting nREPL extensions worth checking out?
 
-Sure! See [third party middleware](third_party_middleware.md) for details.
+Sure! See <<third_party_middleware.adoc#,third party middleware>> for details.
 
 ## Where can I get help regarding nREPL?
 
