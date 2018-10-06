@@ -48,7 +48,8 @@ past, but were replaced by alternatives down the road.
 which was eventually integrated into `cider-nrepl`.
 
 
-!!! Note
-
-    This list doesn't aim to be complete. You can find more 3rd-party middlewares listed
-    link:https://github.com/nrepl/nREPL/wiki/Extensions[here].
+[Note]
+====
+This list doesn't aim to be complete. You can find more 3rd-party middlewares listed
+link:https://github.com/nrepl/nREPL/wiki/Extensions[here].
+====
