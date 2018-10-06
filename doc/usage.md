@@ -12,25 +12,28 @@ popular options available for you today.
 [Leiningen][] has built-in support for nREPL since
 version 2. Just do:
 
-```
+[source]
+----
 lein repl
-```
+----
 
 And you're all set. By default Lein will also connect to the running nREPL server using the
 popular command-line nREPL client [REPL-y][]. If you don't need the terminal REPL you can
 also start nREPL in headless mode:
 
-```
+[source]
+----
 lein repl :headless
-```
+----
 
 #### Using Boot
 
 [Boot][] is a popular alternative to Leiningen, that also has build-in support for nREPL:
 
-```
+[source]
+----
 boot repl
-```
+----
 
 #### Using Clojure CLI tools
 
@@ -51,9 +54,10 @@ Add this alias to `~/.clojure/deps.edn`:
 
 Then you can simply run the nREPL server in headless mode like this:
 
-```
+[source]
+----
 clj -R:nREPL -m nrepl.cmdline
-```
+----
 
 A good practice is add whatever nREPL middleware you want to use to
 the `nREPL` profile, so you can easily activate them when needed. Here's
@@ -70,9 +74,10 @@ how you can easily start a ClojureScript capable nREPL:
 }
 ----
 
-```
+[source]
+----
 clj -R:nREPL -m nrepl.cmdline --middleware "[cider.piggieback/wrap-cljs-repl]"
-```
+----
 
 Here's a listing of all the options available via nREPL's command-line
 interface (this output was simply generated with `--help`):
@@ -119,7 +124,8 @@ nREPL ships with a very simple command-line client that you can use for some bas
 interactions with the server. The following command will start an nREPL server
 and connect with it using the built-in client.
 
-```
+[source]
+----
 clj -Sdeps '{:deps {nrepl {:mvn/version "0.4.5"}}}' -m nrepl.cmdline --interactive
 nREPL server started on port 59403 on host 0:0:0:0:0:0:0:0 - nrepl://0:0:0:0:0:0:0:0:59403
 nREPL 0.4.5
@@ -127,18 +133,19 @@ Clojure 1.9.0
 Java HotSpot(TM) 64-Bit Server VM 10.0.1+10
 user=> (+ 1 2)
 3
-```
+----
 
 If you want to connect to a server that's already running you can do it like this:
 
-```
+[source]
+----
 clj -Sdeps '{:deps {nrepl {:mvn/version "0.4.5"}}}' -m nrepl.cmdline --connect --host host --port port
 nREPL 0.4.5
 Clojure 1.9.0
 Java HotSpot(TM) 64-Bit Server VM 10.0.1+10
 user=> (+ 1 2)
 3
-```
+----
 
 Most users, however, are advised to use REPL-y or their favourite
 editor instead for optimal results.
@@ -261,7 +268,8 @@ From time to time you'd want to experiment with some library without
 adding it as a dependency of your project.  You can easily achieve
 this with `tools.deps` or `pomegranate`. Let's start with a `tools.deps` example:
 
-```
+[source]
+----
 clj -Sdeps '{:deps {nrepl {:mvn/version "0.4.5"} org.clojure/tools.deps.alpha
                 {:git/url "https://github.com/clojure/tools.deps.alpha.git"
                  :sha "d492e97259c013ba401c5238842cd3445839d020"}}}' -m nrepl.cmdline --interactive
@@ -275,11 +283,12 @@ user=> (require 'clojure.core.memoize)
 nil
 user=>
 
-```
+----
 
 Alternatively with `pomegranate` you can do the following:
 
-```
+[source]
+----
 ❯ clj -Sdeps '{:deps {nrepl {:mvn/version "0.4.5"} com.cemerick/pomegranate {:mvn/version "1.0.0"}}}' -m nrepl.cmdline --interactive
 network-repl
 Clojure 1.9.0
@@ -291,7 +300,7 @@ user=> (add-dependencies :coordinates '[[org.clojure/core.memoize "0.7.1"]]
 {[org.clojure/core.memoize "0.7.1"] #{[org.clojure/core.cache "0.7.1"] [org.clojure/clojure "1.6.0"]}, [org.clojure/core.cache "0.7.1"] #{[org.clojure/data.priority-map "0.0.7"]}, [org.clojure/data.priority-map "0.0.7"] nil, [org.clojure/clojure "1.6.0"] nil}
 user=> (require 'clojure.core.memoize)
 nil
-```
+----
 
 [REPL-y]: https://github.com/trptcolin/reply/
 [Boot]: https://github.com/boot-clj/boot

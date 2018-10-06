@@ -37,10 +37,11 @@ are merged in `master` (or the latest stable branch).
 You can install `MkDocs` locally and use the command `mkdocs serve` to see the
 result of changes you make to the manual locally:
 
-```
+[source]
+----
 $ cd path/to/cider/repo
 $ mkdocs serve
-```
+----
 
 If you want to make changes to the manual's page structure you'll have to edit
 [mkdocs.yml](https://github.com/nrepl/nREPL/blob/master/mkdocs.yml).
