@@ -96,6 +96,7 @@ interface (this output was simply generated with `--help`):
 --help                      Show this help message.
 ----
 
+[[connecting-to-an-nrepl-server]]
 ### Connecting to an nREPL server
 
 Most of the time, you will connect to an nREPL server using an existing
@@ -250,7 +251,7 @@ able to easily restart the server, etc., you might want to put the value
 `start-server` returns into an atom or somesuch.  Anyway, once your app is
 running an nREPL server, you can connect to it from a tool like Leiningen or
 Counterclockwise or REPL-y, or from another Clojure process, as shown
-in [Connecting to an nREPL Server](#connecting-to-an-nrepl-server).
+in <<connecting-to-an-nrepl-server>>.
 
 You can stop the server with `(stop-server server)`.
 
